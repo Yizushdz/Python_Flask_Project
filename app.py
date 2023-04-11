@@ -8,7 +8,16 @@ app = Flask(__name__)
 db = SQLAlchemy()
 DB_NAME = "database.db"
 # to secure/encrypt cookies data in our app
-app.config['SECRET_KEY'] = "This is the secret key, don't share with anyone."
+def readDetails(fileName):
+    with open(fileName, 'r') as file:
+        return [line for line in file]
+    
+def getDetails(fileName):
+    with open(fileName) as file:
+        return file.read()
+    
+secret_key = getDetails('secret_key.txt')
+app.config['SECRET_KEY'] = secret_key
 # telling our app where out database is located
 app.config['SQLALCHEMY_DATABASE_URI'] = f"sqlite:///{DB_NAME}"
 # initialize database by giving it our flask app
@@ -55,11 +64,6 @@ def about():
             return redirect('/about')
     return render_template('about.html')
 
-
-
-def readDetails(fileName):
-    with open(fileName, 'r') as file:
-        return [line for line in file]
 
 @app.route('/rocky')
 def rocky():
