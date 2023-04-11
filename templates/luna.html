@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Luna</title>
+{% endblock %}
+
+{% block body %}
+<h1 class="text-center"><strong>Luna</strong></h1>
+<br />
+<img src="static/luna.jpeg" alt="Luna" class="rounded mx-auto d-block" width="400" height="500">
+<br />
+<div class="text-center">
+    {% for content in LunaDetails %}
+      <p>{{content}}<p>
+    {% endfor %}
+  </div>
+  <br />
+{% endblock %}

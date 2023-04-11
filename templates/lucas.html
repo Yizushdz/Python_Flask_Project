@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Lucas</title>
+{% endblock %}
+
+{% block body %}
+<h1 class="text-center"><strong>Lucas</strong></h1>
+<br />
+<img src="static/lucas.jpeg" alt="Lucas" class="rounded mx-auto d-block" width="400" height="500">
+<br />
+<div class="text-center">
+    {% for char in LucasDetails %}
+        <p>{{ char }}</p>
+    {% endfor %}
+</div>
+<br />
+{% endblock %}

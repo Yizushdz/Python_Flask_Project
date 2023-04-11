@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Rocky</title>
+{% endblock %}
+
+{% block body %}
+<h1 class="text-center"><strong>Rocky</strong></h1>
+<br />
+<img src="static/rocky.jpeg" alt="Rocky" class="rounded mx-auto d-block" width="400" height="500">
+
+<br />
+<div class="text-center">
+    {% for content in fileDetails %}
+      <p>{{content}}<p>
+    {% endfor %}
+  </div>
+<br />
+{% endblock %}

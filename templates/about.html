@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>About Me</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <br />
+    <div class="row Text-center">
+        <div class="col-md-6">
+            <pre>
+I am the current Vice-President of the Society
+
+of Hispanic Professional Engineers. I enjoy 
+
+helping others and helping myself along the
+
+way. I love taking part in volunteering events
+
+from the college of engineering. I hope to be
+
+Vice-President again next semester and
+
+eventually, be the president of this club.
+
+            </pre>
+        </div>
+        <div class="col-md-6">
+            <img src="static/shpe.jpeg" width=450 height=350 class="rounded float-right">
+        </div>
+    </div>
+</div>
+<br />
+<div class="container">
+    <br />
+    <div class="row text-center">
+        <div class="col-md-6">
+            <img src="static/asme.jpeg" width=450 height=350 class="rounded float-left">
+        </div>
+        <div class="col-md-6">
+            <pre>
+I am also the current team captain for ASME's
+
+XRC Competition. In this competition, we 
+
+were responsible for creating a robust
+
+algorithm to allow a vehicle to autonomously
+
+complete a lap around a racetrack. I enjoy 
+
+being involved in clubs that allow me to expand
+
+my technical skills and be able to work in a team
+
+of different engineering disciplines.
+            </pre>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+
+<!--Bottom part of website-->
+<form method="POST">
+    <!--We now have a sign up string in center of website-->
+    <h3 align="center">Interested in joining one of these clubs? <strong>SIGN UP!</strong></h3>
+    <!--form-group: a boostrap class to create labels to take info from user-->
+    <div class="form-group">
+        <label for="email">Email Address</label>
+        <!--the 'name' parameter will allow us to access the email adress in the backend-->
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email"/>
+    </div>
+    <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter First Name"/>
+    </div>
+    <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter Last Name"/>
+    </div>
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    <br />
+</form>
+{% endblock %}
